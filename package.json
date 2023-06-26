@@ -1,0 +1,101 @@
+{
+  "name": "b-mart",
+  "version": "1.0.0",
+  "description": "b-mart shopping center",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run start:local",
+    "start:local": "cross-env NODE_ENV=default nodemon server.js",
+    "start:dev": "cross-env NODE_ENV=development node server.js --development",
+    "start:prod": "cross-env NODE_ENV=production node server.js --prod",
+    "test": "jest --coverage",
+    "precommit": "lint-staged",
+    "lint": "eslint --fix **/*.js ./"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/BrijeshLakhani/hapi-api.git"
+  },
+  "keywords": [
+    "hapi",
+    "hapi20",
+    "boilerplate",
+    "hapi-boilerplate"
+  ],
+  "author": "Brijesh Lakhani <lakhani.brijesh376@gmail.com>",
+  "dependencies": {
+    "@hapi/basic": "^6.0.0",
+    "@hapi/boom": "~9.1.4",
+    "@hapi/glue": "^8.0.0",
+    "@hapi/good": "^9.0.1",
+    "@hapi/good-console": "^9.0.1",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^20.2.2",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "@joi/date": "^2.1.0",
+    "aws-sdk": "^2.1353.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "config": "^3.3.7",
+    "dotenv": "^16.0.1",
+    "glob": "^8.0.3",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-dev-errors": "^4.0.0",
+    "hapi-swagger": "^14.5.2",
+    "joi": "^17.8.4",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^9.0.0",
+    "luxon": "^2.5.2",
+    "module-alias": "^2.2.2",
+    "moment": "^2.29.4",
+    "mongodb": "^5.5.0",
+    "mongoose": "^6.11.1",
+    "mongoose-deep-populate": "^3.2.0",
+    "mrhorse": "^6.0.4",
+    "nodemailer": "^6.9.1",
+    "schmervice": "^1.6.0",
+    "uuid": "^8.3.2",
+    "zxcvbn": "^4.4.2"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "server/models",
+    "@plugins": "server/plugins",
+    "@routes": "server/routes",
+    "@utilities": "server/utilities",
+    "@policies": "server/policies",
+    "@services": "server/services",
+    "@api": "server/api"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "lint-staged": "^13.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "2.6.2",
+    "prettier-config-standard": "^5.0.0"
+  }
+}
